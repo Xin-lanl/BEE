@@ -1,0 +1,26 @@
+{
+  "task_conf": {
+      "task_name": "simple-test",
+      "exec_target": "bee_vm",
+      "batch_mode": false,
+      "general_run": [],
+      "mpi_run": [],
+      "terminate_after_exec": false
+  }, 
+  "docker_conf":{
+      "docker_img_tag": "cjy7117/ubuntu-ompi",
+      "docker_username": "root",
+      "docker_shared_dir": "/mnt/docker_share"
+  },
+  "exec_env_conf": {
+      "bee_vm": {
+	  "node_list": ["cn42", "cn43"],
+	  "cpu_core_per_socket": "8",
+	  "cpu_thread_per_core": "1",
+	  "cpu_sockets": "2",
+	  "ram_size": "240G",
+	  "kvm_enabled": true,
+	  "host_input_dir": "/home/xin/bee_share"
+      }
+  }
+}
